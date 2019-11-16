@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.Login">
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".views.LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_gray"
+        android:hint="Número de celular"
+        android:inputType="phone"
+        android:padding="10sp"></EditText>
+
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/btn_rounded_green"
+        android:text="@string/button_login"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"></Button>
+
+</LinearLayout>
