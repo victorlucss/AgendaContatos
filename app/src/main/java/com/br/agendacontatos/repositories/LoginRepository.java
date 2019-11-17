@@ -22,7 +22,7 @@ public class LoginRepository {
     private static LoginRepository instance;
     private FirebaseFirestore mFirestore;
 
-    private String phone;
+    public static String phone;
     private UserModel currentUser;
 
     private LoginRepository() {
@@ -47,6 +47,8 @@ public class LoginRepository {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if(task.isSuccessful()){
+                            phone = user.getPhone();
+
                             if(task.getResult().exists()) currentUser = user;
                             else {
                                 Map<String, Object> phoneUser = new HashMap<>();
