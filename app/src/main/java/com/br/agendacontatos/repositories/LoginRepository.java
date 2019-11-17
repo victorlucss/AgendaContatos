@@ -35,17 +35,12 @@ public class LoginRepository {
         return instance;
     }
 
-    public MutableLiveData<UserModel> getUser(){
-        MutableLiveData<UserModel> user = new MutableLiveData<>();
-        user.setValue(this.currentUser);
-
-        return user;
+    public UserModel getUser(){
+        return currentUser;
     }
 
     public void login(final UserModel user) {
         DocumentReference docRef = this.mFirestore.collection("users").document(user.getPhone());
-
-        Log.d(TAG, "Chamando doutor hans chucrute");
 
         docRef.get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -54,7 +49,6 @@ public class LoginRepository {
                         if(task.isSuccessful()){
                             if(task.getResult().exists()) currentUser = user;
                             else {
-                                Log.d(TAG, "Criando novo usuário");
                                 Map<String, Object> phoneUser = new HashMap<>();
                                 phoneUser.put("phone", user.getPhone());
 
