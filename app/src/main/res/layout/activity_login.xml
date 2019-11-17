@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2E2E"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     android:padding="20sp"
@@ -13,18 +14,18 @@
     <EditText
         android:id="@+id/edit_phone"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:background="@drawable/edit_gray"
         android:hint="Número de celular"
         android:inputType="phone"
-        android:padding="10sp"></EditText>
+        android:padding="20sp"></EditText>
 
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="20sp"
         android:background="@drawable/btn_rounded_green"
         android:text="@string/button_login"
         android:textColor="@android:color/white"
