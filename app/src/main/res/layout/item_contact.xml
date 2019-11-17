@@ -27,7 +27,7 @@
             android:autoSizeTextType="uniform"
             android:maxLines="1"
             android:text="TextView"
-            android:textColor="#333333"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <TextView
@@ -42,7 +42,7 @@
             android:autoSizeTextType="uniform"
             android:maxLines="1"
             android:text="TextView"
-            android:textColor="#333333"
+            android:textColor="#DDDDDD"
             android:textSize="14sp" />
     </LinearLayout>
 
